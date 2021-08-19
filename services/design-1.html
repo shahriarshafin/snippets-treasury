@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/png;base64,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"
+        type="image/gif" sizes="32x32">
+    <link rel="shortcut icon"
+        href="data:image/png;base64,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"
+        type="image/gif" sizes="32x32">
+    <link rel="apple-touch-icon"
+        href="data:image/png;base64,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"
+        type="image/gif">
+    <!-- Google Font CDN -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- Main CSS -->
+    <style>
+        section {
+            padding-top: 70px;
+            font-family: Poppins;
+        }
+
+        .card-wrapper {
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 1.5rem !important;
+            background-color: #fff;
+            border: 1px solid #E3F2FD;
+            transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        }
+
+        .card-wrapper:hover {
+            box-shadow: rgb(32 40 45 / 8%) 0px 2px 14px 0px;
+        }
+
+        .card-wrapper .box {
+            min-width: 72px;
+            min-height: 72px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box-blue {
+            background-color: rgb(227, 242, 253);
+            color: rgb(33, 150, 243);
+        }
+
+        .box-purple {
+            background-color: rgb(237, 231, 246);
+            color: rgb(103, 58, 183);
+        }
+
+        .card-wrapper .box .icon {
+            font-size: 20px;
+        }
+
+        .card-wrapper h5 {
+            margin: 10px;
+            font-size: 14px;
+            color: rgb(33, 33, 33);
+            font-weight: 500;
+            line-height: 18px;
+        }
+    </style>
+    <title>Boot Snippets</title>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <!-- ............Nav-Tab Start............. -->
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-preview-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-preview" type="button" role="tab" aria-controls="pills-preview"
+                        aria-selected="true">Preview</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-code-tab" data-bs-toggle="pill" data-bs-target="#pills-code"
+                        type="button" role="tab" aria-controls="pills-code" aria-selected="false">Code</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-info-tab" data-bs-toggle="pill" data-bs-target="#pills-info"
+                        type="button" role="tab" aria-controls="pills-info" aria-selected="false">Info</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-preview" role="tabpanel"
+                    aria-labelledby="pills-preview-tab">
+                    <!-- preview-panel-start -->
+                    <h2 class="text-center">Know more about Design</h2>
+                    <p class="text-center">If you're in need of a web app that is both user-friendly and scalable, this
+                        is the
+                        template for you.</p>
+
+                    <div class="row">
+                        <!-- card-1-start -->
+                        <div class="col-12 col-lg-3 col-md-6">
+                            <div class="card-wrapper">
+                                <div class="d-flex align-items-center">
+                                    <div class="box box-blue">
+                                        <i class="icon fas fa-code"></i>
+                                    </div>
+                                    <h5>Organized Code </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- card-1-end -->
+                        <div class="col-12 col-lg-3 col-md-6">
+                            <div class="card-wrapper">
+                                <div class="d-flex align-items-center">
+                                    <div class="box box-purple">
+                                        <i class="icon fas fa-qrcode"></i>
+                                    </div>
+                                    <h5>Easy Folder Structure</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3 col-md-6">
+                            <div class="card-wrapper">
+                                <div class="d-flex align-items-center">
+                                    <div class="box box-blue">
+                                        <i class="icon fas fa-code-branch"></i>
+                                    </div>
+                                    <h5>Code Splitting</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3 col-md-6">
+                            <div class="card-wrapper">
+                                <div class="d-flex align-items-center">
+                                    <div class="box box-purple">
+                                        <i class="icon fas fa-folder"></i>
+                                    </div>
+                                    <h5>The Hassle-free Setup Process</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3 col-md-6">
+                            <div class="card-wrapper">
+                                <div class="d-flex align-items-center">
+                                    <div class="box box-blue">
+                                        <i class="icon fas fa-code-branch"></i>
+                                    </div>
+                                    <h5>Code Splitting</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3 col-md-6">
+                            <div class="card-wrapper">
+                                <div class="d-flex align-items-center">
+                                    <div class="box box-purple">
+                                        <i class="icon fas fa-folder"></i>
+                                    </div>
+                                    <h5>The Hassle-free Setup Process</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3 col-md-6">
+                            <div class="card-wrapper">
+                                <div class="d-flex align-items-center">
+                                    <div class="box box-blue">
+                                        <i class="icon fas fa-code-branch"></i>
+                                    </div>
+                                    <h5>Code Splitting</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3 col-md-6">
+                            <div class="card-wrapper">
+                                <div class="d-flex align-items-center">
+                                    <div class="box box-purple">
+                                        <i class="icon fas fa-folder"></i>
+                                    </div>
+                                    <h5>The Hassle-free Setup Process</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- preview-panel-end -->
+                </div>
+                <div class="tab-pane fade" id="pills-code" role="tabpanel" aria-labelledby="pills-code-tab">
+                    <!-- code-panel-start -->
+                    <iframe style="border-radius: 4px;" width="100%" height="500"
+                        src="//jsfiddle.net/shahriarshafin/5ctgn0k7/18/embedded/html,css,js/dark/"
+                        allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                    <!-- code-panel-end -->
+                </div>
+                <div class="tab-pane fade" id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab">
+                    <!-- info-panel-start -->
+                    <p>ref: <a href="https://berrydashboard.io/" target="_blank">https://berrydashboard.io/</a> </p>
+                    <!-- info-panel-end -->
+                </div>
+            </div>
+            <!-- .............Nav-Tab End............. -->
+
+        </div>
+    </section>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
