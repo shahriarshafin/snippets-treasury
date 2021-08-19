@@ -22,34 +22,75 @@
     <title>Title of the site</title>
     <style>
         section {
-            padding: 110px 0px;
+            padding: 40px 0px;
             font-family: Poppins;
+            background-color: #F7F9FC;
         }
 
-        .btn-services {
+        .service-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            border-radius: 20px;
+            color: rgb(45, 55, 72);
             background-color: rgb(255, 255, 255);
-            color: rgb(0, 0, 0);
-            padding: 14px;
-            font-size: 15px;
+            box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+            transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        }
+
+        .service-wrapper:hover {
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+
+        .service-wrapper .inner-box {
+            width: 84px;
+            height: 84px;
+            margin-bottom: 16px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-wrapper .inner-box .icon {
+            font-size: 40px;
+        }
+
+        .box-purple {
+            background-color: #F3E5F5;
+            color: rgb(156, 39, 176);
+        }
+
+        .box-green {
+            background-color: rgb(232, 245, 233);
+            color: rgb(76, 175, 80);
+        }
+
+        .box-blue {
+            background-color: rgb(227, 242, 253);
+            color: rgb(33, 150, 243);
+        }
+
+        .box-pink {
+            background-color: rgb(252, 228, 236);
+            color: rgb(233, 30, 99);
+        }
+
+        .service-wrapper .header {
+            font-size: 1.25rem;
             font-weight: 500;
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-                rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-            transition: all 0.2s ease-out;
             text-align: center;
-            /* width: 200px; */
         }
 
-        .bl-custom-green {
-            border-left: 10px solid #359733;
-        }
-
-        .bl-custom-blue {
-            border-left: 10px solid #31B5E6;
-        }
-
-        .btn-services:hover {
-            box-shadow: rgb(0 0 0 / 42%) -1px 11px 20px -10px,
-                rgb(0 0 0 / 0%) 0px 0px 11px 1px;
+        .service-wrapper .description {
+            margin: 0px;
+            font-family: Inter, sans-serif;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.5;
+            text-align: center;
+            color: rgb(100, 110, 115);
         }
     </style>
 </head>
@@ -58,74 +99,60 @@
 
     <section>
         <div class="container">
-            <h2 class="text-center">Hey You!</h2>
-            <p class="text-center">use this clean design to serve a userfriendly experience</p>
-            <p>ref: <a href="https://piroxbd.netlify.app/service-details.html"
-                    target="_blank">piroxbd.netlify.app/service-details.html</a>
-            </p>
+            <h2 class="text-center">Need awesome Design?</h2>
+            <p class="text-center">Meet shahriar shafin. Who is passing many sleepless nights for you!</p>
 
             <div class="row">
-                <!-- left-side-start -->
-                <div class="col-lg-6 col-12">
-                    <div class="row mt-3">
-                        <div class="col-6">
-                            <div class="btn-services bl-custom-green">Website SEO</div>
+                <!-- service-1-start -->
+                <div class="col-12 col-md-4 col-lg-3 mt-2">
+                    <div class="service-wrapper">
+                        <div class="inner-box box-purple">
+                            <i class="icon fas fa-mobile-alt"></i>
                         </div>
-                        <div class="col-6">
-                            <div class="btn-services bl-custom-green">Web Optimisation</div>
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-6">
-                            <div class="btn-services bl-custom-green">ECom Applications</div>
-                        </div>
-                        <div class="col-6">
-                            <div class="btn-services bl-custom-green">Business Automation</div>
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-6">
-                            <div class="btn-services bl-custom-green"> Web Applications</div>
-                        </div>
-                        <div class="col-6">
-                            <div class="btn-services bl-custom-green">Web Service</div>
-                        </div>
+                        <h6 class="header">UI / UX Design</h6>
+                        <p class="description">We design intuitive web & mobile apps focused on driving user engagement
+                            and increasing users retention.
+                        </p>
                     </div>
                 </div>
-                <!-- left-side-end -->
-
-                <!-- right-side-start -->
-                <div class="col-lg-6 col-12">
-                    <div class="row mt-3">
-                        <div class="col-6">
-                            <div class="btn-services bl-custom-blue">Website SEO</div>
+                <!-- service-1-end -->
+                <div class="col-12 col-md-4 col-lg-3 mt-2">
+                    <div class="service-wrapper">
+                        <div class="inner-box box-green">
+                            <i class="icon fas fa-th-large"></i>
                         </div>
-                        <div class="col-6">
-                            <div class="btn-services bl-custom-blue">Web Optimisation</div>
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-6">
-                            <div class="btn-services bl-custom-blue">ECom Applications</div>
-                        </div>
-                        <div class="col-6">
-                            <div class="btn-services bl-custom-blue">Business Automation</div>
-                        </div>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-6">
-                            <div class="btn-services bl-custom-blue"> Web Applications</div>
-                        </div>
-                        <div class="col-6">
-                            <div class="btn-services bl-custom-blue">Web Service</div>
-                        </div>
+                        <h6 class="header">Product Design</h6>
+                        <p class="description">We transform businesses into world-class brands by going through a well
+                            thought brand identity Lorem, ipsum.
+                        </p>
                     </div>
                 </div>
-                <!-- right-side-end -->
-
+                <div class="col-12 col-md-4 col-lg-3 mt-2">
+                    <div class="service-wrapper">
+                        <div class="inner-box box-blue">
+                            <i class="icon far fa-chart-bar"></i>
+                        </div>
+                        <h6 class="header">Automation</h6>
+                        <p class="description">We design intuitive web & mobile apps focused on driving user engagement
+                            and increasing users retention.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 mt-2">
+                    <div class="service-wrapper">
+                        <div class="inner-box box-pink">
+                            <i class="icon fas fa-laptop-code"></i>
+                        </div>
+                        <h6 class="header">Web Design</h6>
+                        <p class="description">We design intuitive web & mobile apps focused on driving user engagement
+                            and increasing users retention.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
