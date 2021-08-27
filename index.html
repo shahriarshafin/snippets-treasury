@@ -19,98 +19,7 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <!-- Main CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Title of the site</title>
-    <style>
-        /* General CSS */
-        body {
-            font-family: roboto, sans-serif;
-            /* background-color: black; */
-        }
-
-        section {
-            padding: 40px 0px;
-        }
-
-        /* Navbar */
-        .navbar-nav .nav-item {
-            margin-left: 20px;
-        }
-
-        .navbar-nav .nav-item .nav-link {
-            color: black;
-            font-size: 18px;
-            font-weight: 400;
-        }
-
-        .navbar-shadow {
-            box-shadow: 0px 1px 20px -7px rgb(0 0 0 / 52%);
-        }
-
-        /* Hero Section */
-        .hero-heading {
-            margin-top: 1rem;
-            line-height: 40px;
-            text-align: left;
-            font-weight: 500;
-            color: #2d3748;
-        }
-
-        .hero-description {
-            /* padding: 0;s */
-            font-weight: 400;
-            line-height: 1.6;
-            font-size: 20px;
-            text-align: left;
-            color: #718096;
-        }
-
-        .hero-box {
-            height: 130px;
-            background-color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 2px 10px 0 rgb(23 70 161 / 11%);
-            transition: box-shadow .25s ease, transform .25s ease, -webkit-transform .25s ease;
-            margin-top: 1rem;
-        }
-
-        .hero-box .img-icon {
-            max-width: 70px;
-        }
-
-        .hero-box:hover {
-            transform: translate3d(0, -5px, 0);
-            box-shadow: 0 1.5rem 2.5rem rgb(22 28 45 / 10%), 0 0.3rem 0.5rem -0.5rem rgb(22 28 45 / 5%) !important;
-        }
-
-        /* Snip Card Section */
-        .snip-card {
-            border-radius: .35rem !important;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-        }
-
-        .badge {
-            font-weight: 550;
-        }
-
-        .card-img {
-            border-radius: 6px;
-            transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-
-        }
-
-        .card-img:hover {
-            cursor: pointer;
-            opacity: 0.5;
-        }
-
-        .snip-card-cap {
-            font-size: .875em;
-            font-weight: 500 !important;
-            color: #212832 !important;
-        }
-    </style>
+    <title>Snippets Paradise</title>
 </head>
 
 <body>
@@ -119,7 +28,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="index.html">
                         <img src="https://startbootstrap.com/assets/img/sb-logo.svg" alt="" width="55" height="auto">
                     </a>
 
@@ -175,7 +84,7 @@
                         and Dashboards built on top of Bootstrap, Vue.js, React, Angular, Node.js and Laravel. Use our
                         snippets to make over your site to the Next Level! code snoppets for easyer coding
                     </h6>
-                    <a href="#gotosnipCard"><button type="button" class="btn btn-warning mt-2">Browse
+                    <a href="#browse"><button type="button" class="btn btn-warning mt-2">Browse
                             Snippets</button></a>
                 </div>
                 <!-- parent-1-end -->
@@ -186,33 +95,33 @@
                         <!-- single-hero-box-start -->
                         <div class="col-4">
                             <div class="hero-box">
-                                <img class="img-icon" src="./1.png" alt="">
+                                <img class="img-icon" src="./assets/img/icons/html.png" alt="">
                             </div>
                         </div>
                         <!-- single-hero-box-end -->
                         <div class="col-4">
                             <div class="hero-box">
-                                <img class="img-icon" src="./2.png" alt="">
+                                <img class="img-icon" src="./assets/img/icons/css.png" alt="">
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="hero-box">
-                                <img class="img-icon" src="./3.png" alt="">
+                                <img class="img-icon" src="./assets/img/icons/javascript.png" alt="">
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="hero-box">
-                                <img class="img-icon" src="./4.png" alt="">
+                                <img class="img-icon" src="./assets/img/icons/bootstrap.png" alt="">
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="hero-box">
-                                <img class="img-icon" src="./6.png" alt="">
+                                <img class="img-icon" src="./assets/img/icons/react.png" alt="">
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="hero-box">
-                                <img class="img-icon" src="./5.png" alt="">
+                                <img class="img-icon" src="./assets/img/icons/figma.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -224,7 +133,7 @@
     <!-- Hero-Section-End -->
 
     <!-- Snip-Card-Start -->
-    <section id="gotosnipCard">
+    <section id="browse">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-4 col-md-6">
@@ -232,21 +141,20 @@
                         <div class="d-flex justify-content-between">
                             <div>
                                 <span class="badge bg-primary mb-2">Bootstrap-v5.0.1</span>
-                                <a href="./services/index.html"><span class="badge bg-danger mb-2">Services</span></a>
+                                <a href="./features/index.html"><span class="badge bg-danger mb-2">features</span></a>
                             </div>
                             <div>
                                 <span class="badge bg-success mb-2">Free</span>
                             </div>
                         </div>
 
-                        <a href="">
+                        <a href="./features/design-1.html">
                             <div class="bg-dark">
-                                <img class="card-img" class="img-fluid"
-                                    src="https://assets.startbootstrap.com/img/screenshots/snippets/contact-form-split-image.webp"
+                                <img class="card-img" class="img-fluid" src="./assets/img/features/feature-1.png"
                                     alt="">
                             </div>
                         </a>
-                        <p class="snip-card-cap my-2">Hello I am shahriar Shafin Lorem, ipsum.</p>
+                        <p class="snip-card-cap my-2">Usable for highlighting features</p>
                     </div>
                 </div>
                 <div class="col-12 col-lg-4 col-md-6">
@@ -261,14 +169,12 @@
                             </div>
                         </div>
 
-                        <a href="">
+                        <a href="./cards/design-1.html">
                             <div class="bg-dark">
-                                <img class="card-img" class="img-fluid"
-                                    src="https://assets.startbootstrap.com/img/screenshots/snippets/contact-form-split-image.webp"
-                                    alt="">
+                                <img class="card-img" class="img-fluid" src="./assets/img/cards/card-1.png" alt="">
                             </div>
                         </a>
-                        <p class="snip-card-cap my-2">Hello I am shahriar Shafin Lorem, ipsum.</p>
+                        <p class="snip-card-cap my-2">Payment card with value</p>
                     </div>
                 </div>
                 <div class="col-12 col-lg-4 col-md-6">
@@ -276,21 +182,83 @@
                         <div class="d-flex justify-content-between">
                             <div>
                                 <span class="badge bg-primary mb-2">Bootstrap-v5.0.1</span>
-                                <a href="./services/index.html"><span class="badge bg-danger mb-2">Services</span></a>
+                                <a href="./features/index.html"><span class="badge bg-danger mb-2">features</span></a>
                             </div>
                             <div>
                                 <span class="badge bg-success mb-2">Free</span>
                             </div>
                         </div>
 
-                        <a href="">
+                        <a href="./features/design-2.html">
                             <div class="bg-dark">
-                                <img class="card-img" class="img-fluid"
-                                    src="https://assets.startbootstrap.com/img/screenshots/snippets/contact-form-split-image.webp"
+                                <img class="card-img" class="img-fluid" src="./assets/img/features/feature-2.png"
                                     alt="">
                             </div>
                         </a>
-                        <p class="snip-card-cap my-2">Hello I am shahriar Shafin Lorem, ipsum.</p>
+                        <p class="snip-card-cap my-2">Sticky-note type design</p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 col-md-6">
+                    <div class="snip-card mt-5 p-2">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <span class="badge bg-primary mb-2">Bootstrap-v5.0.1</span>
+                                <a href="./features/index.html"><span class="badge bg-danger mb-2">features</span></a>
+                            </div>
+                            <div>
+                                <span class="badge bg-success mb-2">Free</span>
+                            </div>
+                        </div>
+
+                        <a href="./features/design-3.html">
+                            <div class="bg-dark">
+                                <img class="card-img" class="img-fluid" src="./assets/img/features/feature-3.png"
+                                    alt="">
+                            </div>
+                        </a>
+                        <p class="snip-card-cap my-2">General features section looks like cards</p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 col-md-6">
+                    <div class="snip-card mt-5 p-2">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <span class="badge bg-primary mb-2">Bootstrap-v5.0.1</span>
+                                <a href="./features/index.html"><span class="badge bg-danger mb-2">features</span></a>
+                            </div>
+                            <div>
+                                <span class="badge bg-success mb-2">Free</span>
+                            </div>
+                        </div>
+
+                        <a href="./features/design-4.html">
+                            <div class="bg-dark">
+                                <img class="card-img" class="img-fluid" src="./assets/img/features/feature-4.png"
+                                    alt="">
+                            </div>
+                        </a>
+                        <p class="snip-card-cap my-2">Features in two row </p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 col-md-6">
+                    <div class="snip-card mt-5 p-2">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <span class="badge bg-primary mb-2">Bootstrap-v5.0.1</span>
+                                <a href="./features/index.html"><span class="badge bg-danger mb-2">features</span></a>
+                            </div>
+                            <div>
+                                <span class="badge bg-success mb-2">Free</span>
+                            </div>
+                        </div>
+
+                        <a href="./features/design-5.html">
+                            <div class="bg-dark">
+                                <img class="card-img" class="img-fluid" src="./assets/img/features/feature-5.png"
+                                    alt="">
+                            </div>
+                        </a>
+                        <p class="snip-card-cap my-2">Material type design concept</p>
                     </div>
                 </div>
             </div>
