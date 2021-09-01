@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/image/favicon-32x32.png" type="image/gif" sizes="32x32">
+    <link rel="shortcut icon" href="./assets/image/favicon-32x32.png" type="image/gif" sizes="32x32">
+    <link rel="apple-touch-icon" href="./assets/image/apple-touch-icon.png" type="image/gif">
+    <!-- Google Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Title of the site</title>
+    <style>
+        section {
+            padding-top: 70px;
+        }
+
+        .price-box {
+            margin-bottom: 1.5rem;
+            padding: 40px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(33, 43, 54);
+            transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            box-shadow: rgb(145 158 171 / 24%) 0px 0px 2px 0px, rgb(145 158 171 / 24%) 0px 16px 32px -4px;
+            border-radius: 16px;
+            display: flex;
+            position: relative;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .popular-parchase {
+            height: 22px;
+            min-width: 22px;
+            line-height: 0;
+            border-radius: 8px;
+            cursor: default;
+            align-items: center;
+            white-space: nowrap;
+            display: inline-flex;
+            justify-content: center;
+            padding: 0px 8px;
+            color: rgb(12, 83, 183);
+            font-size: 0.75rem;
+            font-family: "Public Sans", sans-serif;
+            background-color: rgba(24, 144, 255, 0.16);
+            font-weight: 700;
+            top: 16px;
+            right: 16px;
+            position: absolute;
+        }
+
+        .plan-type {
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 1.1px;
+            font-family: "Public Sans", sans-serif;
+            color: rgb(99, 115, 129);
+        }
+
+        .price-status {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+
+        .pricing-status-left {
+            margin: 0px;
+            font-weight: 600;
+            line-height: 1.5;
+            font-size: 1rem;
+            font-family: "Public Sans", sans-serif;
+            color: rgb(99, 115, 129);
+        }
+
+        .pricing-status-mid {
+            margin: 0px 8px;
+            font-size: 3rem;
+            font-weight: 700;
+        }
+
+        .pricing-status-right {
+            margin: 0px 0px 8px;
+            font-weight: 600;
+            line-height: 1.57143;
+            font-size: 0.875rem;
+            font-family: "Public Sans", sans-serif;
+            color: rgb(99, 115, 129);
+            align-self: flex-end;
+        }
+
+        .short-info {
+            font-size: 0.75rem;
+            font-weight: 400;
+            font-family: "Public Sans", sans-serif;
+            color: rgb(0, 171, 85);
+        }
+
+        .pricing-icon {
+            /* width: 80px;
+            height: 80px; */
+            font-size: 70px;
+            margin-top: 24px;
+            color: #00AB55;
+        }
+
+        .benefit-list-parent {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+        .text-scilent {
+            color: #A6B0BB;
+        }
+
+        .benefit-list {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            line-height: 2.5;
+            font-size: 0.875rem;
+            font-family: "Public Sans", sans-serif;
+            font-weight: 400;
+        }
+
+        .icon-tick {
+            font-size: 15px;
+            font-weight: 500;
+            margin-right: 10px;
+        }
+
+        .purchase-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 8px 22px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 700;
+            font-family: "Public Sans", sans-serif;
+            font-size: 0.9375rem;
+            color: rgb(255, 255, 255);
+            background-color: rgb(0, 171, 85);
+            height: 48px;
+            width: 100%;
+            min-width: 64px;
+            box-shadow: rgb(0 171 85 / 24%) 0px 8px 16px 0px;
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            color: rgb(255, 255, 255);
+        }
+
+        .purchase-btn:hover {
+            background-color: rgb(0, 123, 85);
+        }
+
+        .current-plan-btn {
+            color: rgba(145, 158, 171, 0.8);
+            box-shadow: none;
+            background-color: rgba(145, 158, 171, 0.24);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 8px 22px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 700;
+            font-family: "Public Sans", sans-serif;
+            font-size: 0.9375rem;
+            height: 48px;
+            width: 100%;
+            min-width: 64px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <!-- ............Nav-Tab Start............. -->
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-preview-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-preview" type="button" role="tab" aria-controls="pills-preview"
+                        aria-selected="true">Preview</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-code-tab" data-bs-toggle="pill" data-bs-target="#pills-code"
+                        type="button" role="tab" aria-controls="pills-code" aria-selected="false">Code</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-info-tab" data-bs-toggle="pill" data-bs-target="#pills-info"
+                        type="button" role="tab" aria-controls="pills-info" aria-selected="false">Info</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-preview" role="tabpanel"
+                    aria-labelledby="pills-preview-tab">
+                    <!-- preview-panel-start -->
+                    <h2 class="text-center">Know more about Design</h2>
+                    <p class="text-center">If you're in need of a web app that is both user-friendly and scalable, this
+                        is the
+                        template for you.</p>
+
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="price-box">
+                                <div class="plan-type">
+                                    BASIC
+                                </div>
+                                <div class="price-status">
+                                    <h2 class="pricing-status-mid">
+                                        Free
+                                    </h2>
+                                </div>
+                                <h6 class="short-info">
+                                    Forever
+                                </h6>
+                                <i class="pricing-icon fas fa-layer-group"></i>
+                                <ul class="benefit-list-parent">
+                                    <li class="benefit-list"> <i class="icon-tick fal fa-check"></i>Advance Sequirity
+                                    </li>
+                                    <li class="benefit-list"> <i class="icon-tick fal fa-check"></i>Permissions &
+                                        workflows</li>
+                                    <li class="benefit-list text-scilent"> <i class="icon-tick fal fa-check"></i>3
+                                        prototypes
+                                    </li>
+                                    <li class="benefit-list text-scilent"> <i class="icon-tick fal fa-check"></i>Up to 5
+                                        team
+                                        members</li>
+                                    <li class="benefit-list text-scilent"> <i class="icon-tick fal fa-check"></i>Advance
+                                        Sequirity
+                                    </li>
+                                </ul>
+                                <div class="current-plan-btn">
+                                    Current Plan
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="price-box">
+                                <span class="popular-parchase">POPULAR</span>
+                                <div class="plan-type">
+                                    STARTER
+                                </div>
+                                <div class="price-status">
+                                    <h6 class="pricing-status-left">
+                                        $
+                                    </h6>
+                                    <h2 class="pricing-status-mid">
+                                        4.99
+                                    </h2>
+                                    <span class="pricing-status-right">
+                                        /mo
+                                    </span>
+                                </div>
+                                <h6 class="short-info">
+                                    Saving $24 A Year
+                                </h6>
+                                <i class="pricing-icon fas fa-layer-group"></i>
+                                <ul class="benefit-list-parent">
+                                    <li class="benefit-list"> <i class="icon-tick fal fa-check"></i>Advance Sequirity
+                                    </li>
+                                    <li class="benefit-list"> <i class="icon-tick fal fa-check"></i>Permissions &
+                                        workflows</li>
+                                    <li class="benefit-list"> <i class="icon-tick fal fa-check"></i>3 prototypes
+                                    </li>
+                                    <li class="benefit-list text-scilent"> <i class="icon-tick fal fa-check"></i>Up to 5
+                                        team
+                                        members</li>
+                                    <li class="benefit-list text-scilent"> <i class="icon-tick fal fa-check"></i>Advance
+                                        Sequirity
+                                    </li>
+                                </ul>
+                                <div class="purchase-btn">
+                                    Choose Strater
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="price-box">
+                                <div class="plan-type">
+                                    PREMIUM
+                                </div>
+                                <div class="price-status">
+                                    <h6 class="pricing-status-left">
+                                        $
+                                    </h6>
+                                    <h2 class="pricing-status-mid">
+                                        9.99
+                                    </h2>
+                                    <span class="pricing-status-right">
+                                        /mo
+                                    </span>
+                                </div>
+                                <h6 class="short-info">
+                                    Saving $35 A Year
+                                </h6>
+                                <i class="pricing-icon fas fa-layer-group"></i>
+                                <ul class="benefit-list-parent">
+                                    <li class="benefit-list"> <i class="icon-tick fal fa-check"></i>Advance Sequirity
+                                    </li>
+                                    <li class="benefit-list"> <i class="icon-tick fal fa-check"></i>Permissions &
+                                        workflows</li>
+                                    <li class="benefit-list"> <i class="icon-tick fal fa-check"></i>3 prototypes
+                                    </li>
+                                    <li class="benefit-list"> <i class="icon-tick fal fa-check"></i>Up to 5 team
+                                        members</li>
+                                    <li class="benefit-list"> <i class="icon-tick fal fa-check"></i>Advance
+                                        Sequirity
+                                    </li>
+                                </ul>
+                                <div class="purchase-btn">
+                                    Choose Premium
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- preview-panel-end -->
+                </div>
+                <div class="tab-pane fade" id="pills-code" role="tabpanel" aria-labelledby="pills-code-tab">
+                    <!-- code-panel-start -->
+                    <iframe style="border-radius: 4px;" width="100%" height="500"
+                        src="//jsfiddle.net/shahriarshafin/vgu15frs/embedded/html,css,js/dark/"
+                        allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                    <!-- code-panel-end -->
+                </div>
+                <div class="tab-pane fade" id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab">
+                    <!-- info-panel-start -->
+                    <p>ref: <a href="https://minimals.cc/pricing" target="_blank">https://minimals.cc/pricing</a> </p>
+                    <!-- info-panel-end -->
+                </div>
+            </div>
+            <!-- .............Nav-Tab End............. -->
+
+        </div>
+    </section>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
