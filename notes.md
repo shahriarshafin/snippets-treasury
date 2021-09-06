@@ -1,0 +1,7 @@
+- load to home card , tag card , each page
+- correct bootstrap version
+- select html bar
+- add info for each snip
+- add nav
+- plan clear
+- dark mode
