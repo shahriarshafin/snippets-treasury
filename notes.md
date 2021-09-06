@@ -5,3 +5,8 @@
 - add nav
 - plan clear
 - dark mode
+- create logo
+- create Favicon
+- add title
+- add seo
+- add analytics
