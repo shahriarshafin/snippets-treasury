@@ -2,7 +2,7 @@ getCardAPI();
 
 // functions
 async function getCardAPI() {
-	const jsondata = await fetch("./cardAPI.json");
+	const jsondata = await fetch("../cardAPI.json");
 	const jsdata = await jsondata.json();
 
 	for (x in jsdata.card) {

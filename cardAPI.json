@@ -1,0 +1,84 @@
+{
+  "card":[
+     {
+        "card":0,
+        "tech":"Bootstrap-v5.0.1",
+        "tags":"Features",
+        "tagsUrl":"./features/index.html",
+        "status":"Free",
+        "imgSrc":"./assets/img/features/feature-1.png",
+        "imgUrl":"./features/design-1.html",
+        "caption":"Usable for highlighting features"
+     },
+     {
+        "card":1,
+        "tech":"Bootstrap-v5.0.1",
+        "tags":"Cards",
+        "tagsUrl":"./cards/index.html",
+        "status":"Free",
+        "imgSrc":"./assets/img/cards/card-1.png",
+        "imgUrl":"./cards/design-1.html",
+        "caption":"Payment card with value"
+     },
+     {
+        "card":2,
+        "tech":"Bootstrap-v5.0.1",
+        "tags":"Features",
+        "tagsUrl":"./features/index.html",
+        "status":"Free",
+        "imgSrc":"./assets/img/features/feature-2.png",
+        "imgUrl":"./features/design-2.html",
+        "caption":"Sticky-note type design"
+     },
+     {
+        "card":3,
+        "tech":"Bootstrap-v5.0.1",
+        "tags":"Pricing",
+        "tagsUrl":"./pricing/index.html",
+        "status":"Free",
+        "imgSrc":"./assets/img/pricing/price-1.png",
+        "imgUrl":"./pricing/design-1.html",
+        "caption":"pricing list card"
+     },
+     {
+        "card":4,
+        "tech":"Bootstrap-v5.0.1",
+        "tags":"Features",
+        "tagsUrl":"./features/index.html",
+        "status":"Free",
+        "imgSrc":"./assets/img/features/feature-3.png",
+        "imgUrl":"./features/design-3.html",
+        "caption":"General features section looks like cards"
+     },
+     {
+        "card":5,
+        "tech":"Bootstrap-v5.0.2",
+        "tags":"signup-login",
+        "tagsUrl":"./signup-login/index.html",
+        "status":"Free",
+        "imgSrc":"./assets/img/signup-login/signup-login-1.png",
+        "imgUrl":"./signup-login/design-1.html",
+        "caption":"Minimalistic sign-up pager design"
+     },
+     {
+        "card":6,
+        "tech":"Bootstrap-v5.0.1",
+        "tags":"Features",
+        "tagsUrl":"./features/index.html",
+        "status":"Free",
+        "imgSrc":"./assets/img/features/feature-4.png",
+        "imgUrl":"./features/design-4.html",
+        "caption":"Features in two row"
+     },
+     {
+        "card":7,
+        "tech":"Bootstrap-v5.0.1",
+        "tags":"Features",
+        "tagsUrl":"./features/index.html",
+        "status":"Free",
+        "imgSrc":"./assets/img/features/feature-5.png",
+        "imgUrl":"./features/design-5.html",
+        "caption":"Material type design concept"
+     }
+  ]
+}

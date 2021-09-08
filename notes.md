@@ -10,3 +10,7 @@
 - add title
 - add seo
 - add analytics
+- add back to top btn
+- add placeholder on card
+- add animation on svg
+- mobile view btn update
