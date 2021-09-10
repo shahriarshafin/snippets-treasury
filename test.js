@@ -2,18 +2,18 @@ getCardAPI();
 
 // functions
 async function getCardAPI() {
-	const jsondata = await fetch("./cardAPI.json");
+	const jsondata = await fetch("./test.json");
 	const jsdata = await jsondata.json();
 
-	for (x in jsdata.card) {
+	for (x in jsdata.cards) {
 		// console.table(jsdata.card[x]);
-		const tech = jsdata.card[x].tech;
-		const tags = jsdata.card[x].tags;
-		const tagsUrl = jsdata.card[x].tagsUrl;
-		const status = jsdata.card[x].status;
-		const imgSrc = jsdata.card[x].imgSrc;
-		const imgUrl = jsdata.card[x].imgUrl;
-		const caption = jsdata.card[x].caption;
+		const tech = jsdata.cards[x].tech;
+		const tags = jsdata.cards[x].tags;
+		const tagsUrl = jsdata.cards[x].tagsUrl;
+		const status = jsdata.cards[x].status;
+		const imgSrc = jsdata.cards[x].imgSrc;
+		const imgUrl = jsdata.cards[x].imgUrl;
+		const caption = jsdata.cards[x].caption;
 		appendCard(tech, tags, tagsUrl, status, imgSrc, imgUrl, caption);
 	}
 }

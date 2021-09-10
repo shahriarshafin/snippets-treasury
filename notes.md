@@ -14,3 +14,4 @@
 - add placeholder on card
 - add animation on svg
 - mobile view btn update
+- stckky navbar
