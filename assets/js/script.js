@@ -1,25 +1,48 @@
 getCardAPI();
 
-// functions
 async function getCardAPI() {
-	const jsondata = await fetch("./assets/cardAPI.json");
-	const jsdata = await jsondata.json();
+	const getjson = await fetch("./assets/cardAPI.json");
+	const snippet = await getjson.json();
 
-	for (x in jsdata.cards) {
-		// console.table(jsdata.card[x]);
-		const tech = jsdata.cards[x].tech;
-		const tags = jsdata.cards[x].tags;
-		const tagsUrl = jsdata.cards[x].tagsUrl;
-		const status = jsdata.cards[x].status;
-		const imgSrc = jsdata.cards[x].imgSrc;
-		const imgUrl = jsdata.cards[x].imgUrl;
-		const caption = jsdata.cards[x].caption;
-		appendCard(tech, tags, tagsUrl, status, imgSrc, imgUrl, caption);
-	}
+	shuffle(snippet.features);
+	deploySnipCard(snippet.features);
+	shuffle(snippet.cards);
+	deploySnipCard(snippet.cards);
+	shuffle(snippet.pricing);
+	deploySnipCard(snippet.pricing);
+	shuffle(snippet.signupLogin);
+	deploySnipCard(snippet.signupLogin);
 }
 
+const shuffle = (array) => {
+	var currentIndex = array.length,
+		randomIndex;
+	while (currentIndex != 0) {
+		randomIndex = Math.floor(Math.random() * currentIndex);
+		currentIndex--;
+		[array[currentIndex], array[randomIndex]] = [
+			array[randomIndex],
+			array[currentIndex],
+		];
+	}
+	return array;
+};
+
+const deploySnipCard = (getSnip) => {
+	for (x in getSnip) {
+		const tech = getSnip[x].tech;
+		const tags = getSnip[x].tags;
+		const tagsUrl = getSnip[x].tagsUrl;
+		const status = getSnip[x].status;
+		const imgSrc = getSnip[x].imgSrc;
+		const imgUrl = getSnip[x].imgUrl;
+		const caption = getSnip[x].caption;
+		appendCard(tech, tags, tagsUrl, status, imgSrc, imgUrl, caption);
+	}
+};
+
 const appendCard = (tech, tags, tagsUrl, status, imgSrc, imgUrl, caption) => {
-	// console.table(tags);
+	// console.table(caption);
 	const mainDiv = document.getElementById("root");
 	mainDiv.classList.add("row");
 
@@ -59,7 +82,7 @@ const appendCard = (tech, tags, tagsUrl, status, imgSrc, imgUrl, caption) => {
 
 	const cardMid_img = document.createElement("img");
 	cardMid_img.classList.add("card-img", "img-fluid");
-	cardMid_img.alt = "i am alt";
+	cardMid_img.alt = "image not found";
 	cardMid_img.loading = "lazy";
 	cardMid_img.src = imgSrc;
 
@@ -67,7 +90,7 @@ const appendCard = (tech, tags, tagsUrl, status, imgSrc, imgUrl, caption) => {
 	cardCaption.classList.add("snip-card-cap", "my-2");
 	cardCaption.innerHTML = caption;
 
-	// Append
+	// Append Elements
 	mainDiv.appendChild(col_12_6_4);
 	col_12_6_4.appendChild(snipCard);
 	// Card Top
