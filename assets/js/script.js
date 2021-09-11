@@ -1,3 +1,7 @@
+window.onscroll = function () {
+	scrollFunction();
+};
+
 getCardAPI();
 
 async function getCardAPI() {
@@ -107,4 +111,19 @@ const appendCard = (tech, tags, tagsUrl, status, imgSrc, imgUrl, caption) => {
 	cardMid_a_div.appendChild(cardMid_img);
 	// Card Bottom
 	snipCard.appendChild(cardCaption);
+};
+
+const scrollFunction = () => {
+	const mybutton = document.getElementById("backtotopBtn");
+
+	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		mybutton.style.display = "block";
+	} else {
+		mybutton.style.display = "none";
+	}
+};
+
+const backTotopClicked = () => {
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
 };
