@@ -85,6 +85,16 @@
          "imgSrc":"./assets/img/signup-login/signup-login-1.png",
          "imgUrl":"./signup-login/design-1.html",
          "caption":"Minimalistic sign-up pager design"
+      },
+      {
+         "card":1,
+         "tech":"Bootstrap-v5.0.2",
+         "tags":"signup-login",
+         "tagsUrl":"./signup-login/index.html",
+         "status":"Free",
+         "imgSrc":"./assets/img/signup-login/signup-login-2.png",
+         "imgUrl":"./signup-login/design-2.html",
+         "caption":"Signup page with common fields"
       }
    ]
  }

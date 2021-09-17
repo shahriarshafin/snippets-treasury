@@ -15,3 +15,6 @@
 - add animation on svg
 - mobile view btn update
 - stckky navbar
+- ref, embeded api data add
+- add tag Section
+- bootstrap main color on tag
