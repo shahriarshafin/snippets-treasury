@@ -96,5 +96,17 @@
          "imgUrl":"./signup-login/design-2.html",
          "caption":"Signup page with common fields"
       }
+   ],
+   "modal":[
+      {
+         "card":0,
+         "tech":"Bootstrap-v5.0.2",
+         "tags":"modal",
+         "tagsUrl":"./modal/index.html",
+         "status":"Free",
+         "imgSrc":"./assets/img/modal/modal-1.png",
+         "imgUrl":"./modal/design-1.html",
+         "caption":"Account deactive modal design"
+      }
    ]
  }

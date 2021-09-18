@@ -16,6 +16,8 @@ async function getCardAPI() {
 	deploySnipCard(snippet.pricing);
 	shuffle(snippet.signupLogin);
 	deploySnipCard(snippet.signupLogin);
+	shuffle(snippet.modal);
+	deploySnipCard(snippet.modal);
 }
 
 const shuffle = (array) => {
