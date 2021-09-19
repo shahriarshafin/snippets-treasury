@@ -18,3 +18,6 @@
 - ref, embeded api data add
 - add tag Section
 - bootstrap main color on tag
+- update nav items, social links add
+- update other index
+- rename site name, meta tags, itle update
