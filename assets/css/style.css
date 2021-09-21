@@ -1,6 +1,7 @@
-/* General CSS */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
 body {
-	font-family: roboto, sans-serif;
+	font-family: "Roboto", sans-serif;
 	/* background-color: black; */
 }
 
@@ -63,6 +64,8 @@ section {
 
 .hero-box .img-icon {
 	max-width: 70px;
+	-webkit-user-drag: none;
+	user-select: none;
 }
 
 .hero-box:hover {
@@ -73,17 +76,21 @@ section {
 
 /* Snip Card Section */
 .snip-card {
+	background-color: #fff;
 	border-radius: 0.35rem !important;
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .badge {
 	font-weight: 550;
+	cursor: pointer;
 }
 
 .card-img {
 	/* border-radius: 6px; */
 	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+	-webkit-user-drag: none;
+	user-select: none;
 }
 
 .card-img:hover {

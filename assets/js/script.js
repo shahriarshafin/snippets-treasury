@@ -108,7 +108,7 @@ const appendCard = (tech, tags, tagsUrl, status, imgSrc, imgUrl, caption) => {
 
 	const cardMid_img = document.createElement("img");
 	cardMid_img.classList.add("card-img", "img-fluid");
-	cardMid_img.alt = "image not found";
+	cardMid_img.alt = "click here";
 	cardMid_img.loading = "lazy";
 	cardMid_img.src = imgSrc;
 

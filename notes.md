@@ -2,15 +2,14 @@
 - correct bootstrap version
 - select html bar
 - add info for each snip
-- add nav
+- add nav in design page
 - plan clear
 - dark mode
-- create logo
+
 - create Favicon
 - add title
 - add seo
 - add analytics
-- add back to top btn
 - add placeholder on card
 - add animation on svg
 - mobile view btn update
@@ -22,3 +21,11 @@
 - update other index
 - rename site name, meta tags, itle update
 - update when emply url
+- ndex description
+- fevixon
+- set card width or height
+- active tag for it corosponding page
+- add creator info
+- add tags url
+
+Snippets Treasury is a easy customizabale, code snippets libraly for Front end designers and developers to bulid website faster and easier. Browse, choose and use our snippets to reduce your development time.
