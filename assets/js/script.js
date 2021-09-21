@@ -1,27 +1,3 @@
-// const onloadFunction = () => {
-// 	const path = window.location.pathname;
-// 	const page = path.split("/").pop();
-
-// 	if (page == "index.html") {
-// 		mainDiv = document.getElementById("root");
-// 	}
-// 	if (page == "features.html") {
-// 		mainDiv = document.getElementById("features-root");
-// 	}
-// 	if (page == "cards.html") {
-// 		mainDiv = document.getElementById("cards-root");
-// 	}
-// 	if (page == "pricing.html") {
-// 		mainDiv = document.getElementById("pricing-root");
-// 	}
-// 	if (page == "signup-login.html") {
-// 		mainDiv = document.getElementById("signup-login-root");
-// 	}
-// 	if (page == "modal.html") {
-// 		mainDiv = document.getElementById("modal-root");
-// 	}
-// };
-
 async function getCardAPI() {
 	const getjson = await fetch("../assets/cardAPI.json");
 	const snippet = await getjson.json();
@@ -29,7 +5,7 @@ async function getCardAPI() {
 	const path = window.location.pathname;
 	const page = path.split("/").pop();
 
-	if (page == "index.html") {
+	if (page == "index.html" || page == "") {
 		shuffle(snippet.features);
 		deploySnipCard(snippet.features);
 		shuffle(snippet.cards);
@@ -91,7 +67,7 @@ const deploySnipCard = (getSnip) => {
 };
 
 const appendCard = (tech, tags, tagsUrl, status, imgSrc, imgUrl, caption) => {
-	console.table(caption);
+	// console.table(caption);
 
 	const mainDiv = document.getElementById("root");
 	mainDiv.classList.add("row");
@@ -179,4 +155,3 @@ window.onscroll = function () {
 };
 
 getCardAPI();
-// onloadFunction();

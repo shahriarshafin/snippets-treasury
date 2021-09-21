@@ -21,3 +21,4 @@
 - update nav items, social links add
 - update other index
 - rename site name, meta tags, itle update
+- update when emply url
