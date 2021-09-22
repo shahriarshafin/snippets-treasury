@@ -108,5 +108,17 @@
          "imgUrl":"https://snippet-treasury.netlify.app/modal/design-1.html",
          "caption":"Account deactive modal design"
       }
+   ],
+   "footer":[
+      {
+         "card":0,
+         "tech":"Bootstrap-v5.0.2",
+         "tags":"footer",
+         "tagsUrl":"https://snippet-treasury.netlify.app/footer/footer.html",
+         "status":"Free",
+         "imgSrc":"https://snippet-treasury.netlify.app/assets/img/footer/footer-1.png",
+         "imgUrl":"https://snippet-treasury.netlify.app/footer/design-1.html",
+         "caption":"Simple footer design"
+      }
    ]
  }

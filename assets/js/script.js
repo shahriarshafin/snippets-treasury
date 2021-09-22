@@ -16,6 +16,8 @@ async function getCardAPI() {
 		deploySnipCard(snippet.signupLogin);
 		shuffle(snippet.modal);
 		deploySnipCard(snippet.modal);
+		shuffle(snippet.footer);
+		deploySnipCard(snippet.footer);
 	}
 	if (page == "features.html") {
 		shuffle(snippet.features);
@@ -36,6 +38,10 @@ async function getCardAPI() {
 	if (page == "modal.html") {
 		shuffle(snippet.modal);
 		deploySnipCard(snippet.modal);
+	}
+	if (page == "footer.html") {
+		shuffle(snippet.footer);
+		deploySnipCard(snippet.footer);
 	}
 }
 
