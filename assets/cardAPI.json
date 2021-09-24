@@ -61,6 +61,16 @@
          "imgSrc":"../assets/img/cards/card-1.png",
          "imgUrl":"../cards/design-1.html",
          "caption":"Payment card with value"
+      },
+      {
+         "card":1,
+         "tech":"Bootstrap-v5.0.2",
+         "tags":"cards",
+         "tagsUrl":"../cards/cards.html",
+         "status":"Free",
+         "imgSrc":"../assets/img/cards/card-2.png",
+         "imgUrl":"../cards/design-2.html",
+         "caption":"Team profile card"
       }
    ],
    "pricing":[
