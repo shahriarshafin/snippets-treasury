@@ -18,6 +18,8 @@ async function getCardAPI() {
 		deploySnipCard(snippet.modal);
 		shuffle(snippet.footer);
 		deploySnipCard(snippet.footer);
+		shuffle(snippet.tabs);
+		deploySnipCard(snippet.tabs);
 	}
 	if (page == "features.html") {
 		shuffle(snippet.features);
@@ -42,6 +44,10 @@ async function getCardAPI() {
 	if (page == "footer.html") {
 		shuffle(snippet.footer);
 		deploySnipCard(snippet.footer);
+	}
+	if (page == "tabs.html") {
+		shuffle(snippet.tabs);
+		deploySnipCard(snippet.tabs);
 	}
 }
 
