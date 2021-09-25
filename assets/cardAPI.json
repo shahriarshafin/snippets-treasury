@@ -71,6 +71,16 @@
          "imgSrc":"../assets/img/cards/card-2.png",
          "imgUrl":"../cards/design-2.html",
          "caption":"Team profile card"
+      },
+      {
+         "card":2,
+         "tech":"Bootstrap-v5.0.2",
+         "tags":"cards",
+         "tagsUrl":"../cards/cards.html",
+         "status":"Free",
+         "imgSrc":"../assets/img/cards/card-3.png",
+         "imgUrl":"../cards/design-3.html",
+         "caption":"Modern card design"
       }
    ],
    "pricing":[
