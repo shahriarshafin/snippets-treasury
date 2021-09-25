@@ -49,6 +49,16 @@
          "imgSrc":"../assets/img/features/feature-5.png",
          "imgUrl":"../features/design-5.html",
          "caption":"Material type design concept"
+      },
+      {
+         "card":5,
+         "tech":"Bootstrap-v5.0.2",
+         "tags":"features",
+         "tagsUrl":"../features/features.html",
+         "status":"Free",
+         "imgSrc":"../assets/img/features/feature-6.png",
+         "imgUrl":"../features/design-6.html",
+         "caption":"Details about your product"
       }
    ],
    "cards":[
