@@ -20,6 +20,21 @@ async function getCardAPI() {
 		deploySnipCard(snippet.footer);
 		shuffle(snippet.tabs);
 		deploySnipCard(snippet.tabs);
+
+		// for (x in snippet) {
+		// 	const getId = x + "_Badge";
+		// 	console.log(getId);
+		// }
+
+		document.getElementById("features_Badge").innerHTML =
+			snippet.features.length;
+		document.getElementById("cards_Badge").innerHTML = snippet.cards.length;
+		document.getElementById("pricing_Badge").innerHTML = snippet.pricing.length;
+		document.getElementById("signupLogin_Badge").innerHTML =
+			snippet.signupLogin.length;
+		document.getElementById("modal_Badge").innerHTML = snippet.modal.length;
+		document.getElementById("footer_Badge").innerHTML = snippet.footer.length;
+		document.getElementById("tabs_Badge").innerHTML = snippet.tabs.length;
 	}
 	if (page == "features.html") {
 		shuffle(snippet.features);
@@ -146,6 +161,32 @@ const appendCard = (tech, tags, tagsUrl, status, imgSrc, imgUrl, caption) => {
 	// Card Bottom
 	snipCard.appendChild(cardCaption);
 };
+
+// const appendCard = (tech, tags, tagsUrl, status, imgSrc, imgUrl, caption) => {
+// 	const mainDiv = document.getElementById("root");
+// 	mainDiv.innerHTML += `
+// 	<div class="col-12 col-lg-4 col-md-6">
+//     	<div class="snip-card mt-5 p-2">
+//         	<div class="d-flex justify-content-between">
+//             	<div>
+//                 	<span class="badge bg-primary mb-2">${tech}</span>
+//                 	<a href="${tagsUrl}">
+//                     <span class="badge bg-danger mb-2 mx-1">${tags}</span></a>
+//             	</div>
+//             	<div>
+//                 	<span class="badge bg-success mb-2">${status}</span>
+//             	</div>
+//         	</div>
+//         	<a href="${imgUrl}">
+//             	<div class="bg-dark">
+//                 	<img class="card-img img-fluid" alt="click here" loading="lazy"
+//                     	src="${imgSrc}">
+//             	</div>
+//         	</a>
+//         	<p class="snip-card-cap my-2">${caption}</p>
+//     	</div>
+// 	</div>`;
+// };
 
 const backTotopClicked = () => {
 	document.body.scrollTop = 0;
