@@ -91,6 +91,16 @@
          "imgSrc":"../assets/img/cards/card-3.png",
          "imgUrl":"../cards/design-3.html",
          "caption":"Modern card design"
+      },
+      {
+         "card":3,
+         "tech":"Bootstrap-v5.1.1",
+         "tags":"cards",
+         "tagsUrl":"../cards/cards.html",
+         "status":"Free",
+         "imgSrc":"../assets/img/cards/card-4.png",
+         "imgUrl":"../cards/design-4.html",
+         "caption":"Shopping product card"
       }
    ],
    "pricing":[
