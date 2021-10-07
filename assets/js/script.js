@@ -111,7 +111,7 @@ const appendCard = (tech, tags, tagsUrl, status, imgSrc, imgUrl, caption) => {
 	const cardTopLeft = document.createElement("div");
 
 	const cardTopleftSpan = document.createElement("span");
-	cardTopleftSpan.classList.add("badge", "bg-primary", "mb-2");
+	cardTopleftSpan.classList.add("badge", "btn-purple", "mb-2");
 	cardTopleftSpan.innerHTML = tech;
 
 	const cardTopleftA = document.createElement("a");

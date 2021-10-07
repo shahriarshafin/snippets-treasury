@@ -9,6 +9,16 @@ section {
 	padding: 40px 0px;
 }
 
+.btn-purple {
+	color: white;
+	background-color: #7311f6;
+	transition: all 0.4s;
+}
+.btn-purple:hover {
+	color: white;
+	background-color: #5900ce;
+}
+
 /* Navbar */
 .navbar-nav .nav-item {
 	margin-left: 20px;
@@ -23,15 +33,13 @@ section {
 .navbar-shadow {
 	box-shadow: 0px 1px 20px -7px rgb(0 0 0 / 52%);
 }
-.btn-purple {
-	color: white;
-	background-color: #7311f6;
-	transition: all 0.4s;
+.logo {
+	-webkit-user-drag: none;
+	user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
 }
-.btn-purple:hover {
-	color: white;
-	background-color: #5900ce;
-}
+
 /* Hero Section */
 .hero-heading {
 	margin-top: 1rem;
@@ -40,7 +48,6 @@ section {
 	font-weight: 500;
 	color: #2d3748;
 }
-
 .hero-description {
 	/* padding: 0;s */
 	font-weight: 400;
@@ -49,7 +56,6 @@ section {
 	text-align: left;
 	color: #718096;
 }
-
 .hero-box {
 	height: 130px;
 	background-color: #fff;
@@ -61,13 +67,11 @@ section {
 		-webkit-transform 0.25s ease;
 	margin-top: 1rem;
 }
-
 .hero-box .img-icon {
 	max-width: 70px;
 	-webkit-user-drag: none;
 	user-select: none;
 }
-
 .hero-box:hover {
 	transform: translate3d(0, -5px, 0);
 	box-shadow: 0 1.5rem 2.5rem rgb(22 28 45 / 10%),
@@ -80,24 +84,20 @@ section {
 	border-radius: 0.35rem !important;
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
-
 .badge {
 	font-weight: 550;
 	cursor: pointer;
 }
-
 .card-img {
 	/* border-radius: 6px; */
 	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 	-webkit-user-drag: none;
 	user-select: none;
 }
-
 .card-img:hover {
 	cursor: pointer;
 	opacity: 0.5;
 }
-
 .snip-card-cap {
 	font-size: 0.875em;
 	font-weight: 500 !important;

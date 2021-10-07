@@ -31,5 +31,6 @@
 - scroll back to same position
 - meta tag added
 - change js card to string card
+- add time in card
 
 Snippets Treasury is a easy customizabale, code snippets libraly for Front end designers and developers to bulid website faster and easier. Browse, choose and use our snippets to reduce your development time.
