@@ -5,21 +5,8 @@ async function getCardAPI() {
 	const path = window.location.pathname;
 	const page = path.split("/").pop();
 
-	if (page == "index.html" || page == "") {
-		shuffle(snippet.features);
-		deploySnipCard(snippet.features);
-		shuffle(snippet.cards);
-		deploySnipCard(snippet.cards);
-		shuffle(snippet.pricing);
-		deploySnipCard(snippet.pricing);
-		shuffle(snippet.signupLogin);
-		deploySnipCard(snippet.signupLogin);
-		shuffle(snippet.modal);
-		deploySnipCard(snippet.modal);
-		shuffle(snippet.footer);
-		deploySnipCard(snippet.footer);
-		shuffle(snippet.tabs);
-		deploySnipCard(snippet.tabs);
+	if (page === "index.html" || page === "") {
+		deploySnipCard(snippet);
 
 		// for (x in snippet) {
 		// 	const getId = x + "_Badge";
@@ -36,32 +23,32 @@ async function getCardAPI() {
 		document.getElementById("footer_Badge").innerHTML = snippet.footer.length;
 		document.getElementById("tabs_Badge").innerHTML = snippet.tabs.length;
 	}
-	if (page == "features.html") {
-		shuffle(snippet.features);
+	if (page === "features.html") {
+		// shuffle(snippet.features);
 		deploySnipCard(snippet.features);
 	}
-	if (page == "cards.html") {
-		shuffle(snippet.cards);
+	if (page === "cards.html") {
+		// shuffle(snippet.cards);
 		deploySnipCard(snippet.cards);
 	}
-	if (page == "pricing.html") {
-		shuffle(snippet.pricing);
+	if (page === "pricing.html") {
+		// shuffle(snippet.pricing);
 		deploySnipCard(snippet.pricing);
 	}
-	if (page == "signup-login.html") {
-		shuffle(snippet.signupLogin);
+	if (page === "signup-login.html") {
+		// shuffle(snippet.signupLogin);
 		deploySnipCard(snippet.signupLogin);
 	}
-	if (page == "modal.html") {
-		shuffle(snippet.modal);
+	if (page === "modal.html") {
+		// shuffle(snippet.modal);
 		deploySnipCard(snippet.modal);
 	}
-	if (page == "footer.html") {
-		shuffle(snippet.footer);
+	if (page === "footer.html") {
+		// shuffle(snippet.footer);
 		deploySnipCard(snippet.footer);
 	}
-	if (page == "tabs.html") {
-		shuffle(snippet.tabs);
+	if (page === "tabs.html") {
+		// shuffle(snippet.tabs);
 		deploySnipCard(snippet.tabs);
 	}
 }
@@ -69,7 +56,7 @@ async function getCardAPI() {
 const shuffle = (array) => {
 	var currentIndex = array.length,
 		randomIndex;
-	while (currentIndex != 0) {
+	while (currentIndex) {
 		randomIndex = Math.floor(Math.random() * currentIndex);
 		currentIndex--;
 		[array[currentIndex], array[randomIndex]] = [
@@ -80,68 +67,155 @@ const shuffle = (array) => {
 	return array;
 };
 
-const deploySnipCard = (getSnip) => {
-	for (x in getSnip) {
-		const tech = getSnip[x].tech;
-		const tags = getSnip[x].tags;
-		const tagsUrl = getSnip[x].tagsUrl;
-		const status = getSnip[x].status;
-		const imgSrc = getSnip[x].imgSrc;
-		const imgUrl = getSnip[x].imgUrl;
-		const caption = getSnip[x].caption;
-		appendCard(tech, tags, tagsUrl, status, imgSrc, imgUrl, caption);
-	}
+const deploySnipCard = (snippet) => {
+	const arr = Object.entries(snippet);
+	arr.forEach((item) => {
+		item[1].forEach((item2) => {
+			// const { tech, tags, tagsUrl, status, imgSrc, imgUrl, caption } = item2;
+			appendCard(item2);
+		});
+	});
 };
 
-const appendCard = (tech, tags, tagsUrl, status, imgSrc, imgUrl, caption) => {
+const createElementAndAddingClass = (type, alternativeOptions, ...stringOfStyles) => {
+
+	const el = document.createElement(type);
+
+	const { innerHTML, href, imgUrl, alt, loading, src } = alternativeOptions;
+
+	if (stringOfStyles) {
+		el.classList.add(...stringOfStyles);
+	}
+	if (innerHTML) {
+		el.innerHTML = innerHTML
+	}
+	if (href) {
+		el.href = href
+	}
+	if (imgUrl) {
+		el.imgUrl = imgUrl
+	}
+	if (alt) {
+		el.alt = alt
+	}
+	if (loading) {
+		el.loading = loading
+	}
+	if (src) {
+		el.src = src
+	}
+
+	el.classList.add(...stringOfStyles);
+
+	console.log(el);
+	return el;
+};
+
+const appendCard = item2 => {
+	const { tech, tags, tagsUrl, status, imgSrc, imgUrl, caption } = item2;
 	// console.table(caption);
 
 	const mainDiv = document.getElementById("root");
 	mainDiv.classList.add("row");
 
-	const col_12_6_4 = document.createElement("div");
-	col_12_6_4.classList.add("col-12", "col-lg-4", "col-md-6");
+	const col_12_6_4 = createElementAndAddingClass("div",
+		{},
+		"col-12",
+		"col-lg-4",
+		"col-md-6"
+	);
 
-	const snipCard = document.createElement("div");
-	snipCard.classList.add("snip-card", "mt-5", "p-2");
+	const snipCard = createElementAndAddingClass("div",
+		{},
+		"snip-card",
+		"mt-5",
+		"p-2"
+	);
 
-	const cardTop = document.createElement("div");
-	cardTop.classList.add("d-flex", "justify-content-between");
+	const cardTop = createElementAndAddingClass("div",
+		{},
+		"d-flex",
+		"justify-content-between"
+	);
 
-	const cardTopLeft = document.createElement("div");
+	const cardTopLeft = createElementAndAddingClass("div", {});
 
-	const cardTopleftSpan = document.createElement("span");
-	cardTopleftSpan.classList.add("badge", "btn-purple", "mb-2");
-	cardTopleftSpan.innerHTML = tech;
+	const cardTopleftSpan = createElementAndAddingClass("span",
+		{ innerHTML: tech },
+		"badge",
+		"btn-purple",
+		"mb-2"
+	)
 
-	const cardTopleftA = document.createElement("a");
-	cardTopleftA.href = tagsUrl;
+	const cardTopleftA = createElementAndAddingClass("a",
+		{ href: tagsUrl }
+	)
 
-	const cardTopleft_a_span = document.createElement("span");
-	cardTopleft_a_span.classList.add("badge", "bg-danger", "mb-2", "mx-1");
-	cardTopleft_a_span.innerHTML = tags;
+	const cardTopleft_a_span = createElementAndAddingClass("span",
+		{ innerHTML: tags },
+		"badge",
+		"bg-danger",
+		"mb-2",
+		"mx-1"
+	)
 
-	const cardTopRight = document.createElement("div");
+	// const cardTopRight = document.createElement("div");
+	const cardTopRight = createElementAndAddingClass("div", {})
 
-	const cardTopRightSpan = document.createElement("span");
-	cardTopRightSpan.classList.add("badge", "bg-success", "mb-2");
-	cardTopRightSpan.innerHTML = status;
+	const cardTopRightSpan = createElementAndAddingClass("span",
+		{ innerHTML: status },
+		"badge",
+		"bg-success",
+		"mb-2"
+	)
 
-	const cardMid_a = document.createElement("a");
-	cardMid_a.href = imgUrl;
 
-	const cardMid_a_div = document.createElement("div");
-	cardMid_a_div.classList.add("bg-dark");
+	// const cardMid_a = document.createElement("a");
+	// cardMid_a.href = imgUrl;
 
-	const cardMid_img = document.createElement("img");
-	cardMid_img.classList.add("card-img", "img-fluid");
-	cardMid_img.alt = "click here";
-	cardMid_img.loading = "lazy";
-	cardMid_img.src = imgSrc;
+	const cardMid_a = createElementAndAddingClass("a",
+		{ href: imgUrl }
+	)
 
-	const cardCaption = document.createElement("p");
-	cardCaption.classList.add("snip-card-cap", "my-2");
-	cardCaption.innerHTML = caption;
+	// const cardMid_a_div = document.createElement("div");
+	// cardMid_a_div.classList.add("bg-dark");
+
+	const cardMid_a_div = createElementAndAddingClass("div",
+		{},
+		"bg-dark"
+	)
+
+	const cardMid_img = createElementAndAddingClass("img",
+		{ alt: "click here", loading: "lazy", src: imgSrc },
+		"card-img",
+		"img-fluid"
+	)
+
+	const cardCaption = createElementAndAddingClass("p",
+		{ innerHTML: caption },
+		"snip-card-cap",
+		"my-2"
+	)
+
+	const Elements = [
+		mainDiv,
+		col_12_6_4,
+		snipCard,
+		cardTop,
+		cardTopLeft,
+		cardTopleftA,
+		cardTopRight,
+		cardMid_a,
+		cardMid_a_div
+	]
+
+	Elements.reduce((acc, el) => {
+
+		acc.appendChild(el)
+
+		return el
+
+	})
 
 	// Append Elements
 	mainDiv.appendChild(col_12_6_4);
@@ -160,9 +234,14 @@ const appendCard = (tech, tags, tagsUrl, status, imgSrc, imgUrl, caption) => {
 	cardMid_a_div.appendChild(cardMid_img);
 	// Card Bottom
 	snipCard.appendChild(cardCaption);
+
 };
 
-// const appendCard = (tech, tags, tagsUrl, status, imgSrc, imgUrl, caption) => {
+// const appendCard = (item2) => {
+
+// const { tech, tags, tagsUrl, status, imgSrc, imgUrl, caption } = item2;
+// console.table(caption);
+
 // 	const mainDiv = document.getElementById("root");
 // 	mainDiv.innerHTML += `
 // 	<div class="col-12 col-lg-4 col-md-6">
