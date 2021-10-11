@@ -20,6 +20,8 @@ async function getCardAPI() {
 		deploySnipCard(snippet.footer);
 		shuffle(snippet.tabs);
 		deploySnipCard(snippet.tabs);
+		shuffle(snippet.newsletter);
+		deploySnipCard(snippet.newsletter);
 
 		// for (x in snippet) {
 		// 	const getId = x + "_Badge";
@@ -35,6 +37,7 @@ async function getCardAPI() {
 		document.getElementById("modal_Badge").innerHTML = snippet.modal.length;
 		document.getElementById("footer_Badge").innerHTML = snippet.footer.length;
 		document.getElementById("tabs_Badge").innerHTML = snippet.tabs.length;
+		document.getElementById("newsletter_Badge").innerHTML = snippet.newsletter.length;
 	}
 	if (page == "features.html") {
 		shuffle(snippet.features);
@@ -63,6 +66,10 @@ async function getCardAPI() {
 	if (page == "tabs.html") {
 		shuffle(snippet.tabs);
 		deploySnipCard(snippet.tabs);
+	}
+	if (page == "newsletter.html") {
+		shuffle(snippet.newsletter);
+		deploySnipCard(snippet.newsletter);
 	}
 }
 

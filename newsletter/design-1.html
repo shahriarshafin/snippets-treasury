@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/image/favicon-32x32.png" type="image/gif" sizes="32x32">
+    <link rel="shortcut icon" href="./assets/image/favicon-32x32.png" type="image/gif" sizes="32x32">
+    <link rel="apple-touch-icon" href="./assets/image/apple-touch-icon.png" type="image/gif">
+    <!-- Google Font CDN -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Title of the site</title>
+    <style>
+        body {
+            background: #fafafa;
+        }
+
+        section {
+            padding-top: 70px;
+        }
+
+        .newsletter-wrapper {
+            background-color: #fff;
+            background-image: url(https://bulma.io/images/hab/newsletter-strip.png);
+            background-repeat: repeat-x;
+            background-size: 96px 16px;
+            padding: 60px;
+            border-radius: 1.5em;
+            box-shadow: 0 1em 2em rgb(0 0 0 / 5%);
+        }
+
+        .newsletter-left {
+            display: flex;
+            text-align: left;
+            padding: 18px 20px;
+        }
+
+        .newsletter-left .icon {
+            font-size: 2.5rem;
+            color: #00d1b2;
+        }
+
+        .newsletter-left .heading {
+            font-size: 2rem;
+            font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-weight: 600;
+            line-height: 1.25;
+        }
+
+        .newsletter-left .description {
+            color: #7a7a7a;
+            display: block;
+            font-size: 1.25rem;
+        }
+
+        .newsletter-right-icon {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            padding-left: 1rem;
+            line-height: 1.5;
+            color: #dbdbdb;
+            font-size: 1.25rem;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .newsletter-input {
+            height: 50px;
+            border-radius: 8px;
+            font-size: 1.25rem;
+            border-left: 0px;
+        }
+
+        .newsletter-input:focus {
+            border-color: #00c4a7;
+            box-shadow: 0 0 0 0.125em rgb(0 209 178 / 25%);
+        }
+
+        .newsletter-input::placeholder {
+            color: #DBDBDB;
+        }
+
+        .subscribe-btn {
+            height: 48px;
+            padding: 7px 21px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+            border-radius: 8px;
+            border: 1px solid rgba(145, 158, 171, 0.32);
+            background-color: #00d1b2;
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+        }
+
+        .subscribe-btn:hover {
+            background-color: #00c4a7;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <!-- ............Nav-Tab Start............. -->
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-preview-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-preview" type="button" role="tab" aria-controls="pills-preview"
+                        aria-selected="true">Preview</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-code-tab" data-bs-toggle="pill" data-bs-target="#pills-code"
+                        type="button" role="tab" aria-controls="pills-code" aria-selected="false">Code</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-info-tab" data-bs-toggle="pill" data-bs-target="#pills-info"
+                        type="button" role="tab" aria-controls="pills-info" aria-selected="false">Info</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-preview" role="tabpanel"
+                    aria-labelledby="pills-preview-tab">
+                    <!-- preview-panel-start -->
+                    <section>
+                        <div class="container">
+                            <div class="newsletter-wrapper">
+                                <div class="row d-flex align-items-center justify-content-center">
+
+                                    <div class="col-12 col-lg-5">
+                                        <div class="newsletter-left">
+                                            <i class="icon fas fa-paper-plane"></i>
+                                            <div style="margin-left: 24px;">
+                                                <h6 class="heading">
+                                                    Newsletter
+                                                </h6>
+                                                <p class="description">Features, releases, showcase… stay in the loop!
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-lg-7">
+                                        <form class="row">
+                                            <div class="col-12 col-md-7">
+                                                <div class="input-group mb-3">
+                                                    <span class="newsletter-right-icon" id="basic-addon1">
+                                                        <i class="fas fa-envelope"></i></span>
+                                                    <input type="email" class="form-control newsletter-input"
+                                                        placeholder="email address" aria-label="email address">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <button type="submit" class="subscribe-btn">Subscribe</button>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- preview-panel-end -->
+                </div>
+                <div class="tab-pane fade" id="pills-code" role="tabpanel" aria-labelledby="pills-code-tab">
+                    <!-- code-panel-start -->
+                    <iframe style="border-radius: 4px;" width="100%" height="500"
+                        src="//jsfiddle.net/shahriarshafin/yn3Lqf0c/1/embedded/html,css,js/dark/"
+                        allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                    <!-- code-panel-end -->
+                </div>
+                <div class="tab-pane fade" id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab">
+                    <!-- info-panel-start -->
+                    <p>ref: <a href="https://bulma.io/" target="_blank">https://bulma.io/</a> </p>
+                    <!-- info-panel-end -->
+                </div>
+            </div>
+            <!-- .............Nav-Tab End............. -->
+        </div>
+    </section>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
