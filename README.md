@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/shahriarshafin/snippets-treasury/master/assets/img/logo.svg?token=AHVY5NWYC3MIIIPEMI3WGOLBN3E6E" alt="Logo" width="80" height="80">
+    <img src="./assets/img/logo.svg" alt="Logo" width="80" height="80">
 </p>
   <h2 align="center">Snippets Treasury</h2>
 
@@ -8,7 +8,7 @@
 Snippets Treasury is an easy customizabale code snippets libraly for designers and developers to bulid website faster and easier. Browse, choose and use snippets to reduce your development time.
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/shahriarshafin/snippets-treasury/master/assets/img/ss.png?token=AHVY5NW2MEVKJL5XHBI5X73BN3FB2" alt="Logo" width="" height="">
+    <img src="assets/img/ss.png" alt="Logo" width="" height="">
 </p>
 
 ## Set up and run
