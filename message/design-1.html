@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/image/favicon-32x32.png" type="image/gif" sizes="32x32">
+    <link rel="shortcut icon" href="./assets/image/favicon-32x32.png" type="image/gif" sizes="32x32">
+    <link rel="apple-touch-icon" href="./assets/image/apple-touch-icon.png" type="image/gif">
+    <!-- Google Font CDN -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Title of the site</title>
+    <style>
+        section {
+            padding-top: 70px;
+        }
+
+        .bg-sky-blue {
+            background-color: #00D1B2 ! important;
+            color: #fff ! important;
+        }
+
+        .bg-light-blue {
+            background-color: #EFFAF5 !important;
+            color: #607953 !important;
+        }
+
+        .bg-light-danger {
+            background-color: #FEECF0 !important;
+            color: #CC0F35 !important;
+        }
+
+        .message {
+            background-color: #f5f5f5;
+            border-radius: .375em;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #4a4a4a;
+            border-radius: .375em .375em 0 0;
+            color: #fff;
+            font-weight: 700;
+            line-height: 1.25;
+            padding: .75em 1em;
+            position: relative;
+        }
+
+        .message-close-btn {
+            color: #fff;
+            background-color: rgba(10, 10, 10, .2);
+            border-radius: 100%;
+            height: 20px;
+            width: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .message-close-btn:hover {
+            background-color: rgba(10, 10, 10, .3);
+        }
+
+        .message-body {
+            border-color: #dbdbdb;
+            border-radius: .375em;
+            border-width: 0 0 0 4px;
+            color: #4a4a4a;
+            padding: 1.25em 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <!-- ............Nav-Tab Start............. -->
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-preview-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-preview" type="button" role="tab" aria-controls="pills-preview"
+                        aria-selected="true">Preview</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-code-tab" data-bs-toggle="pill" data-bs-target="#pills-code"
+                        type="button" role="tab" aria-controls="pills-code" aria-selected="false">Code</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-info-tab" data-bs-toggle="pill" data-bs-target="#pills-info"
+                        type="button" role="tab" aria-controls="pills-info" aria-selected="false">Info</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-preview" role="tabpanel"
+                    aria-labelledby="pills-preview-tab">
+                    <!-- preview-panel-start -->
+                    <section>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-4">
+                                    <div class='message'>
+                                        <div class="message-header">
+                                            <span>Hello World</span>
+                                            <i class="message-close-btn fas fa-times"></i>
+                                        </div>
+                                        <!-- <button type="button" class="btn btn-danger">Danger</button> -->
+                                        <div class="message-body">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem architecto
+                                            vitae recusandae
+                                            doloribus <strong>Lorem ipsum dolor sit amet.</strong>optio sapiente
+                                            laboriosam fuga rerum
+                                            harum
+                                            nisi. Lorem aipsum dolor sit amet
+                                            consectetur adipisicing elit. Lorem ipsum dolor sit amet. Lorem ipsum dolor
+                                            sit amet
+                                            consectetur, adipisicing elit. Obcaecati, temporibus?
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class='message'>
+                                        <div class="message-header bg-sky-blue">
+                                            <span>Hello World</span>
+                                            <i class="message-close-btn fas fa-times"></i>
+                                        </div>
+                                        <!-- <button type="button" class="btn btn-danger">Danger</button> -->
+                                        <div class="message-body bg-light-blue">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem architecto
+                                            vitae recusandae
+                                            doloribus optio sapiente laboriosam fuga rerum harum nisi. Lorem ipsum dolor
+                                            sit amet
+                                            consectetur adipisicing elit <strong>fuga rerum harum nisi sit
+                                                amet.</strong>. Lorem ipsum
+                                            dolor
+                                            sit
+                                            amet. Lorem ipsum dolor sit amet
+                                            consectetur, adipisicing elit. Obcaecati, temporibus?
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class='message'>
+                                        <div class="message-header bg-danger">
+                                            <span>Hello World</span>
+                                            <i class="message-close-btn fas fa-times"></i>
+                                        </div>
+                                        <!-- <button type="button" class="btn btn-danger">Danger</button> -->
+                                        <div class="message-body bg-light-danger">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem architecto
+                                            vitae recusandae
+                                            doloribus optio sapiente laboriosam fuga rerum harum nisi. Lorem ipsum dolor
+                                            sit amet
+                                            consectetur adipisicing elit. Lorem ipsum <strong>adipisicing elit.
+                                                Obcaecati,
+                                                temporibus?</strong> dolor sit
+                                            amet. Lorem ipsum dolor sit amet
+                                            consectetur, adipisicing elit. Obcaecati
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- preview-panel-end -->
+                </div>
+                <div class="tab-pane fade" id="pills-code" role="tabpanel" aria-labelledby="pills-code-tab">
+                    <!-- code-panel-start -->
+                    <iframe style="border-radius: 4px;" width="100%" height="500"
+                        src="//jsfiddle.net/shahriarshafin/052xzpdb/3/embedded/html,css,js/dark/"
+                        allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                    <!-- code-panel-end -->
+                </div>
+                <div class="tab-pane fade" id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab">
+                    <!-- info-panel-start -->
+                    <p>ref: <a href="https://bulma.io/documentation/components/message/"
+                            target="_blank">https://bulma.io/documentation/components/message/</a> </p>
+                    <!-- info-panel-end -->
+                </div>
+            </div>
+            <!-- .............Nav-Tab End............. -->
+        </div>
+    </section>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

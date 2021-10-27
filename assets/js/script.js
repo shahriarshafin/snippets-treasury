@@ -1,11 +1,11 @@
 async function getCardAPI() {
-	const getjson = await fetch("../assets/cardAPI.json");
+	const getjson = await fetch('../assets/cardAPI.json');
 	const snippet = await getjson.json();
 
 	const path = window.location.pathname;
-	const page = path.split("/").pop();
+	const page = path.split('/').pop();
 
-	if (page == "index.html" || page == "") {
+	if (page == 'index.html' || page == '') {
 		shuffle(snippet.features);
 		deploySnipCard(snippet.features);
 		shuffle(snippet.cards);
@@ -22,54 +22,54 @@ async function getCardAPI() {
 		deploySnipCard(snippet.tabs);
 		shuffle(snippet.newsletter);
 		deploySnipCard(snippet.newsletter);
+		shuffle(snippet.message);
+		deploySnipCard(snippet.message);
 
 		// for (x in snippet) {
 		// 	const getId = x + "_Badge";
 		// 	console.log(getId);
 		// }
 
-		document.getElementById("features_Badge").innerHTML =
+		document.getElementById('features_Badge').innerHTML =
 			snippet.features.length;
-		document.getElementById("cards_Badge").innerHTML = snippet.cards.length;
-		document.getElementById("pricing_Badge").innerHTML = snippet.pricing.length;
-		document.getElementById("signupLogin_Badge").innerHTML =
+		document.getElementById('cards_Badge').innerHTML = snippet.cards.length;
+		document.getElementById('pricing_Badge').innerHTML = snippet.pricing.length;
+		document.getElementById('signupLogin_Badge').innerHTML =
 			snippet.signupLogin.length;
-		document.getElementById("modal_Badge").innerHTML = snippet.modal.length;
-		document.getElementById("footer_Badge").innerHTML = snippet.footer.length;
-		document.getElementById("tabs_Badge").innerHTML = snippet.tabs.length;
-		document.getElementById("newsletter_Badge").innerHTML = snippet.newsletter.length;
+		document.getElementById('modal_Badge').innerHTML = snippet.modal.length;
+		document.getElementById('footer_Badge').innerHTML = snippet.footer.length;
+		document.getElementById('tabs_Badge').innerHTML = snippet.tabs.length;
+		document.getElementById('newsletter_Badge').innerHTML =
+			snippet.newsletter.length;
+		document.getElementById('message_Badge').innerHTML =
+			snippet.newsletter.length;
 	}
-	if (page == "features.html") {
-		shuffle(snippet.features);
+	if (page == 'features.html') {
 		deploySnipCard(snippet.features);
 	}
-	if (page == "cards.html") {
-		shuffle(snippet.cards);
+	if (page == 'cards.html') {
 		deploySnipCard(snippet.cards);
 	}
-	if (page == "pricing.html") {
-		shuffle(snippet.pricing);
+	if (page == 'pricing.html') {
 		deploySnipCard(snippet.pricing);
 	}
-	if (page == "signup-login.html") {
-		shuffle(snippet.signupLogin);
+	if (page == 'signup-login.html') {
 		deploySnipCard(snippet.signupLogin);
 	}
-	if (page == "modal.html") {
-		shuffle(snippet.modal);
+	if (page == 'modal.html') {
 		deploySnipCard(snippet.modal);
 	}
-	if (page == "footer.html") {
-		shuffle(snippet.footer);
+	if (page == 'footer.html') {
 		deploySnipCard(snippet.footer);
 	}
-	if (page == "tabs.html") {
-		shuffle(snippet.tabs);
+	if (page == 'tabs.html') {
 		deploySnipCard(snippet.tabs);
 	}
-	if (page == "newsletter.html") {
-		shuffle(snippet.newsletter);
+	if (page == 'newsletter.html') {
 		deploySnipCard(snippet.newsletter);
+	}
+	if (page == 'message.html') {
+		deploySnipCard(snippet.message);
 	}
 }
 
@@ -103,51 +103,51 @@ const deploySnipCard = (getSnip) => {
 const appendCard = (tech, tags, tagsUrl, status, imgSrc, imgUrl, caption) => {
 	// console.table(caption);
 
-	const mainDiv = document.getElementById("root");
-	mainDiv.classList.add("row");
+	const mainDiv = document.getElementById('root');
+	mainDiv.classList.add('row');
 
-	const col_12_6_4 = document.createElement("div");
-	col_12_6_4.classList.add("col-12", "col-lg-4", "col-md-6");
+	const col_12_6_4 = document.createElement('div');
+	col_12_6_4.classList.add('col-12', 'col-lg-4', 'col-md-6');
 
-	const snipCard = document.createElement("div");
-	snipCard.classList.add("snip-card", "mt-5", "p-2");
+	const snipCard = document.createElement('div');
+	snipCard.classList.add('snip-card', 'mt-5', 'p-2');
 
-	const cardTop = document.createElement("div");
-	cardTop.classList.add("d-flex", "justify-content-between");
+	const cardTop = document.createElement('div');
+	cardTop.classList.add('d-flex', 'justify-content-between');
 
-	const cardTopLeft = document.createElement("div");
+	const cardTopLeft = document.createElement('div');
 
-	const cardTopleftSpan = document.createElement("span");
-	cardTopleftSpan.classList.add("badge", "btn-purple", "mb-2");
+	const cardTopleftSpan = document.createElement('span');
+	cardTopleftSpan.classList.add('badge', 'btn-purple', 'mb-2');
 	cardTopleftSpan.innerHTML = tech;
 
-	const cardTopleftA = document.createElement("a");
+	const cardTopleftA = document.createElement('a');
 	cardTopleftA.href = tagsUrl;
 
-	const cardTopleft_a_span = document.createElement("span");
-	cardTopleft_a_span.classList.add("badge", "bg-danger", "mb-2", "mx-1");
+	const cardTopleft_a_span = document.createElement('span');
+	cardTopleft_a_span.classList.add('badge', 'bg-danger', 'mb-2', 'mx-1');
 	cardTopleft_a_span.innerHTML = tags;
 
-	const cardTopRight = document.createElement("div");
+	const cardTopRight = document.createElement('div');
 
-	const cardTopRightSpan = document.createElement("span");
-	cardTopRightSpan.classList.add("badge", "bg-success", "mb-2");
+	const cardTopRightSpan = document.createElement('span');
+	cardTopRightSpan.classList.add('badge', 'bg-success', 'mb-2');
 	cardTopRightSpan.innerHTML = status;
 
-	const cardMid_a = document.createElement("a");
+	const cardMid_a = document.createElement('a');
 	cardMid_a.href = imgUrl;
 
-	const cardMid_a_div = document.createElement("div");
-	cardMid_a_div.classList.add("bg-dark");
+	const cardMid_a_div = document.createElement('div');
+	cardMid_a_div.classList.add('bg-dark');
 
-	const cardMid_img = document.createElement("img");
-	cardMid_img.classList.add("card-img", "img-fluid");
-	cardMid_img.alt = "click here";
-	cardMid_img.loading = "lazy";
+	const cardMid_img = document.createElement('img');
+	cardMid_img.classList.add('card-img', 'img-fluid');
+	cardMid_img.alt = 'click here';
+	cardMid_img.loading = 'lazy';
 	cardMid_img.src = imgSrc;
 
-	const cardCaption = document.createElement("p");
-	cardCaption.classList.add("snip-card-cap", "my-2");
+	const cardCaption = document.createElement('p');
+	cardCaption.classList.add('snip-card-cap', 'my-2');
 	cardCaption.innerHTML = caption;
 
 	// Append Elements
@@ -201,12 +201,12 @@ const backTotopClicked = () => {
 };
 
 const scrollFunction = () => {
-	const mybutton = document.getElementById("backtotopBtn");
+	const mybutton = document.getElementById('backtotopBtn');
 
 	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-		mybutton.style.display = "block";
+		mybutton.style.display = 'block';
 	} else {
-		mybutton.style.display = "none";
+		mybutton.style.display = 'none';
 	}
 };
 
