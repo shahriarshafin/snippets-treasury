@@ -101,6 +101,16 @@
 			"imgSrc": "../assets/img/cards/card-4.png",
 			"imgUrl": "../cards/design-4.html",
 			"caption": "Shopping product card"
+		},
+		{
+			"card": 4,
+			"tech": "Bootstrap-v5.1.1",
+			"tags": "cards",
+			"tagsUrl": "../cards/cards.html",
+			"status": "Free",
+			"imgSrc": "../assets/img/cards/card-5.png",
+			"imgUrl": "../cards/design-5.html",
+			"caption": "Snippets Treasury card"
 		}
 	],
 	"pricing": [
