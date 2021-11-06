@@ -168,6 +168,16 @@
 			"status": "Free",
 			"imgSrc": "../assets/img/footer/footer-1.png",
 			"imgUrl": "../footer/design-1.html",
+			"caption": "Footer with 3 column links"
+		},
+		{
+			"card": 1,
+			"tech": "Bootstrap-v5.1.3",
+			"tags": "footer",
+			"tagsUrl": "../footer/footer.html",
+			"status": "Free",
+			"imgSrc": "../assets/img/footer/footer-2.png",
+			"imgUrl": "../footer/design-2.html",
 			"caption": "Simple footer design"
 		}
 	],
