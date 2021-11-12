@@ -179,6 +179,16 @@
 			"imgSrc": "../assets/img/footer/footer-2.png",
 			"imgUrl": "../footer/design-2.html",
 			"caption": "Simple footer design"
+		},
+		{
+			"card": 2,
+			"tech": "Bootstrap-v5.1.3",
+			"tags": "footer",
+			"tagsUrl": "../footer/footer.html",
+			"status": "Free",
+			"imgSrc": "../assets/img/footer/footer-3.png",
+			"imgUrl": "../footer/design-3.html",
+			"caption": "Ecommerce website footer"
 		}
 	],
 	"tabs": [
